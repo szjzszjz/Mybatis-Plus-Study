@@ -1,0 +1,18 @@
+spring:
+  #  profiles:
+  #    active: dev
+
+
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql:///mp?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+logging:
+  level:
+    root: warn
+    com.szjz.mybatisplusstudy.dao: trace  #dao包下的最低级别的日志
+  pattern:  #控制台打印格式
+    console: '%p%m%n'  # %p:日志级别  %m:内容  %n:换行
