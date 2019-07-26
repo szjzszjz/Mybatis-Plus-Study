@@ -16,3 +16,22 @@ logging:
     com.szjz.mybatisplusstudy.dao: trace  #dao包下的最低级别的日志
   pattern:  #控制台打印格式
     console: '%p%m%n'  # %p:日志级别  %m:内容  %n:换行
+
+
+
+###################  mybatis-plus配置  ###################
+mybatis-plus:
+  # 如果是放在src/main/java目录下 classpath:/com/yourPackage/*/mapper/*Mapper.xml
+  # 如果是放在resource目录 classpath:/mapper/*Mapper.xml
+  mapper-locations:
+    - mapper/*Mapper.xml
+#  global-config:
+#    db-config:
+#      id-type: auto #配置全局自增策略  局部策略优于去全局策略
+#      table-underline: true #表名用下划线命名 默认trus
+#      field-strategy: not_null # 字段策略 字段为null时不插入表内
+#      table-prefix: sys_ #设置全局表名前缀
+  type-aliases-package: com.szjz.mybatisplusstudy.entity
+#  config-location: classpath:mybatis-config.xml
+  configuration:
+    map-underscore-to-camel-case: true  #下划线转驼峰 与config-location不能同时使用
